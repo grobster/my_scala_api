@@ -1,3 +1,6 @@
 compile
 run
 compile
+scalaSource
+compile
+exit
