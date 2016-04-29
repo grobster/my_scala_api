@@ -13,3 +13,10 @@ clean
 compile
 console
 exit
+compile
+tasks
+doc
+compile
+doc
+compile
+exit
