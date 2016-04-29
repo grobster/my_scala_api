@@ -4,3 +4,11 @@ compile
 scalaSource
 compile
 exit
+compile
+reload
+compile
+run
+compile
+clean
+compile
+console
