@@ -1,7 +1,7 @@
 package jio {
 	import java.nio.file._
 
-	object Backup {
+	object File {
 		/** This function takes a java.nio.file.Path and converts it to Scala List
 		  * if it is a directory.  If the path object is null, or doesn't exist,
 		  * the method returns an empty list.

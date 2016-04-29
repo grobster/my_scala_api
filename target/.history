@@ -20,3 +20,5 @@ compile
 doc
 compile
 exit
+clean
+compile
