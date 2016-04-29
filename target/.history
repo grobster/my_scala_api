@@ -12,3 +12,4 @@ compile
 clean
 compile
 console
+exit
