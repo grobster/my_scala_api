@@ -37,7 +37,7 @@ package math {
 		def fact(x: BigInt): BigInt = {
 			@tailrec
 			def _fact(x: BigInt, acc: BigInt): BigInt = x match {
-				case x if(x > 0) => _fact(x -1, x * acc)
+				case x if(x > 0) => _fact(x - 1, x * acc)
 				case _ => acc
 			}
 			_fact(x, 1)
