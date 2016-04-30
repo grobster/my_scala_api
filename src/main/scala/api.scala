@@ -28,3 +28,21 @@ package jio {
 		def createDirectory(p: Path): Either[Exception, Path] = try Right(Files.createDirectory(p)) catch { case e: Exception => Left(e)}
 	}
 }
+import scala.annotation._
+package math {
+	object Factorial {
+		/** This function finds the factorial of a number
+		  * @param x
+		  */
+		def fact(x: BigInt): BigInt = {
+			@tailrec
+			def _fact(x: BigInt, acc: BigInt): BigInt = x match {
+				case x if(x > 0) => _fact(x -1, x * acc)
+				case _ => acc
+			}
+			_fact(x, 1)
+		}
+	}
+	
+}
+
