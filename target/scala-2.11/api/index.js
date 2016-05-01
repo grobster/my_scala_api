@@ -1,1 +1,1 @@
-Index.PACKAGES = {"jio" : [{"object" : "jio\/File$.html", "name" : "jio.File"}], "math" : [{"object" : "math\/Factorial$.html", "name" : "math.Factorial"}]};
+Index.PACKAGES = {"collection" : [{"case class" : "collection\/Cons.html", "name" : "collection.Cons"}, {"object" : "collection\/List$.html", "trait" : "collection\/List.html", "name" : "collection.List"}, {"object" : "collection\/Nil$.html", "name" : "collection.Nil"}], "jio" : [{"object" : "jio\/File$.html", "name" : "jio.File"}], "math" : [{"object" : "math\/Factorial$.html", "name" : "math.Factorial"}]};
