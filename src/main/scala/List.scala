@@ -11,6 +11,8 @@ sealed trait List[+A] {
 		case Cons(h,t) => Cons(f(h), t.map(f))
 	}
 	
+	def filter(f: A => Boolean): List[A] = foldLeft(Nil: List[A])((t,h) => if(f(h)) Cons(h, t) else t)
+	
 	def foldLeft[B](z: B)(f: (B,A) => B): B = this match {
 		case Cons(h,t) => t.foldLeft(f(z, h))(f)
 		case _ => z
@@ -21,6 +23,7 @@ sealed trait List[+A] {
 	  */
 	def reverse(): List[A] = foldLeft(List[A]())((b,a) => Cons(a,b))
 }
+
 /**
   * Represents an empty List.
   */
