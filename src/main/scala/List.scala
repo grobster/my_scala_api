@@ -22,6 +22,23 @@ sealed trait List[+A] {
 	  * Reverses order of a list
 	  */
 	def reverse(): List[A] = foldLeft(List[A]())((b,a) => Cons(a,b))
+	
+	/**
+	  * Returns last element in list.
+	  */
+	def last: Option[A] = this match {
+		case Cons(h,t) if(t == Nil) => Some(h)
+		case Cons(h,t) if(t != Nil) => t.last
+		case _ => None
+	}
+	
+	/**
+	  * Returns first element in list.
+	  */
+	def headOption: Option[A] = this match {
+		case Cons(h,_) => Some(h)
+		case _ => None
+	}
 }
 
 /**
