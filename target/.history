@@ -75,3 +75,6 @@ console
 compile
 doc
 compile
+:q
+compile
+exit

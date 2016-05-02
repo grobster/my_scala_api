@@ -21,7 +21,7 @@ sealed trait List[+A] {
 	/**
 	  * Reverses order of a list
 	  */
-	def reverse(): List[A] = foldLeft(List[A]())((b,a) => Cons(a,b))
+	def reverse: List[A] = foldLeft(List[A]())((b,a) => Cons(a,b))
 	
 	/**
 	  * Returns last element in list.
