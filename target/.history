@@ -81,3 +81,6 @@ exit
 compile
 console
 exit
+doc
+compile
+exit
