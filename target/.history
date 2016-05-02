@@ -78,3 +78,6 @@ compile
 :q
 compile
 exit
+compile
+console
+exit

@@ -65,4 +65,12 @@ object List {
 		}
 		_range(start, end, Nil).reverse
 	}
+	
+	def fill[A](n: Int, a: A): List[A] = {
+		def _fill(n: Int, a: A, acc: List[A]): List[A] = n match {
+			case x if(x > 0) => _fill(n - 1, a, Cons(a, acc))
+			case _ => acc
+		}
+		_fill(n, a, Nil)
+	}
 }
