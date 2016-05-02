@@ -56,3 +56,7 @@ compile
 doc
 compile
 exit
+compile
+console
+compile
+exit

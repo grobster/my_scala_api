@@ -6,7 +6,10 @@ import scala.annotation._
   * trait of list object
   */
 sealed trait List[+A] {
-	//def map[B](f: A => B): List[B] = foldLeft(Nil: List[B])((h,t) => Cons(f(h), t))
+	def map[B](f: A => B): List[B] = this match {
+		case Nil => Nil
+		case Cons(h,t) => Cons(f(h), t.map(f))
+	}
 	
 	def foldLeft[B](z: B)(f: (B,A) => B): B = this match {
 		case Cons(h,t) => t.foldLeft(f(z, h))(f)
